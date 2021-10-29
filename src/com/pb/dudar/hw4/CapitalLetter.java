@@ -14,7 +14,6 @@ public class CapitalLetter {
         upper(a);
     }
 
-
     public static void upper(String a) {
         String[] ololo = a.split(" ");
         for (int i = 0; i < ololo.length; i++) {
