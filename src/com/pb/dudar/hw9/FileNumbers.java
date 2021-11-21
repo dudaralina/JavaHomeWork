@@ -8,6 +8,9 @@ import java.nio.file.Paths;
 import java.util.Random;
 
 public class FileNumbers {
+    Path path = Paths.get("files\\numbers.txt");
+    Path path2 = Paths.get("files\\odd-numbers.txt");
+
     public static void main(String[] args)throws Exception {
         Path file1 = new FileNumbers().createNumbersFile();
         Path file2 = new FileNumbers().createOddNumbersFile(file1);
@@ -15,10 +18,10 @@ public class FileNumbers {
 
     //Метод 1
     public Path createNumbersFile() throws Exception {
-        //Создаем файл по адресу "files\\numbers.txt"
-        Path path = Files.createFile(Paths.get("files\\numbers.txt"));
+
         Random x = new Random();
         String y;
+
 //Записываем в файл рандомные цмфры по 10 цифр в каждой строке (10 строк):
         try (BufferedWriter writer = Files.newBufferedWriter(path)) {
             for (int i = 0; i < 10; i++) {
@@ -37,7 +40,7 @@ public class FileNumbers {
 
     //Метод 2
 public Path createOddNumbersFile (Path path) throws Exception {
-    Path path2 = Files.createFile(Paths.get("files\\odd-numbers.txt"));
+
     //Записываем в новый файл:
     try (BufferedWriter writer = Files.newBufferedWriter(path2)) {
         //Считываем файл, который нужно переписать:
