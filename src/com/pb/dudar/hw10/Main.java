@@ -2,7 +2,7 @@ package com.pb.dudar.hw10;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        NumBox<Integer> a1 = new NumBox(3);
+        NumBox<Integer> a1 = new NumBox<>(3);
         a1.add( 0, 3);
         a1.add(2,12);
         a1.add(6,5);
